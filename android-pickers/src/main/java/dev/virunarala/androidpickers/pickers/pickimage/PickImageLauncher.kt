@@ -3,8 +3,8 @@ package dev.virunarala.androidpickers.pickers.pickimage
 import androidx.activity.ComponentActivity
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
-import dev.virunarala.androidpickers.pickers.model.PickImageInput
-import dev.virunarala.androidpickers.pickers.model.PickImageOutput
+import dev.virunarala.androidpickers.pickers.pickimage.model.PickImageInput
+import dev.virunarala.androidpickers.pickers.pickimage.model.PickImageOutput
 
 
 class PickImageLauncher {

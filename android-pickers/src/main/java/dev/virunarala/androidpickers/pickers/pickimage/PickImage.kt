@@ -11,8 +11,8 @@ import android.os.ext.SdkExtensions
 import android.provider.MediaStore
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
-import dev.virunarala.androidpickers.pickers.model.PickImageInput
-import dev.virunarala.androidpickers.pickers.model.PickImageOutput
+import dev.virunarala.androidpickers.pickers.pickimage.model.PickImageInput
+import dev.virunarala.androidpickers.pickers.pickimage.model.PickImageOutput
 
 private const val GMS_ACTION_PICK_IMAGES = "com.google.android.gms.provider.action.PICK_IMAGES"
 

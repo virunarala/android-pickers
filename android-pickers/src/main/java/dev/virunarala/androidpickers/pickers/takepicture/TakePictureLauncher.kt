@@ -3,8 +3,8 @@ package dev.virunarala.androidpickers.pickers.takepicture
 import android.net.Uri
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
-import dev.virunarala.androidpickers.pickers.model.TakePictureInput
-import dev.virunarala.androidpickers.pickers.model.TakePictureOutput
+import dev.virunarala.androidpickers.pickers.takepicture.model.TakePictureInput
+import dev.virunarala.androidpickers.pickers.takepicture.model.TakePictureOutput
 
 class TakePictureLauncher {
 

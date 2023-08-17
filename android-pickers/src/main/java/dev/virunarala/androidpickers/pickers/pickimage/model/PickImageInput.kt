@@ -1,4 +1,4 @@
-package dev.virunarala.androidpickers.pickers.model
+package dev.virunarala.androidpickers.pickers.pickimage.model
 
 import androidx.activity.result.contract.ActivityResultContracts
 

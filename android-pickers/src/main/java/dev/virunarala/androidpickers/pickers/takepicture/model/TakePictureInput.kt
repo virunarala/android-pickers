@@ -1,4 +1,4 @@
-package dev.virunarala.androidpickers.pickers.model
+package dev.virunarala.androidpickers.pickers.takepicture.model
 
 import android.net.Uri
 
