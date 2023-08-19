@@ -6,7 +6,8 @@ import java.io.File
 enum class FileExtensions(val extension: String) {
     JPG(".jpg"),
     PNG(".png"),
-    PDF(".pdf")
+    PDF(".pdf"),
+    MP4(".mp4")
 }
 
 fun createInternalFile(context: Context, extension: String): File {
