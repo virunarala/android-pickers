@@ -1,2 +1,2 @@
 # android-pickers
-An android library that provides convenient APIs enabling android apps to implement the upload of mutlimedia and files by the users to the app
+An android library that provides convenient APIs to let the user upload mutlimedia and files to your app.
