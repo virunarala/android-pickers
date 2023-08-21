@@ -9,7 +9,7 @@ import androidx.fragment.app.Fragment
 import dev.virunarala.androidpickers.pickers.file.openfiles.model.OpenFilesInput
 import dev.virunarala.androidpickers.pickers.file.openfiles.model.OpenFilesOutput
 
-private class OpenFilesLauncher {
+class OpenFilesLauncher {
 
     fun launch(activity: ComponentActivity,
                mimeTypes: Array<String>,

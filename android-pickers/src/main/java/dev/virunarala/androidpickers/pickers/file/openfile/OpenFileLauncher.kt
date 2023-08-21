@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 import dev.virunarala.androidpickers.pickers.file.openfile.model.OpenFileInput
 import dev.virunarala.androidpickers.pickers.file.openfile.model.OpenFileOutput
 
-private class OpenFileLauncher {
+class OpenFileLauncher {
 
     companion object {
         private const val TAG = "OpenFileLauncher"
