@@ -3,41 +3,27 @@ package dev.virunarala.androidpickers.pickers.video.capture
 import android.net.Uri
 import androidx.activity.ComponentActivity
 import androidx.fragment.app.Fragment
-import dev.virunarala.androidpickers.pickers.photo.capture.model.PhotoCaptureInput
-import dev.virunarala.androidpickers.pickers.photo.capture.model.PhotoCaptureOutput
 import dev.virunarala.androidpickers.pickers.video.capture.model.VideoCaptureInput
 import dev.virunarala.androidpickers.pickers.video.capture.model.VideoCaptureOutput
 
-class VideoCaptureLauncher {
+class VideoCaptureLauncher private constructor(activity: ComponentActivity? = null,
+                                               fragment: Fragment? = null
+) {
 
-    fun launch(activity: ComponentActivity,
-               uri: Uri,
-               onSuccess: (VideoCaptureOutput) -> Unit,
-               onFailure: (message: String) -> Unit) {
-        val videoCaptureLauncher = activity.registerForActivityResult(
-            VideoCapture()
-        ) { uri ->
+    constructor(activity: ComponentActivity): this(activity,null)
+    constructor(fragment: Fragment): this(null,fragment)
 
-        }
+    private val activity = activity ?: fragment!!.requireActivity()
 
-        videoCaptureLauncher.launch(
-            VideoCaptureInput(
-                uri,
-                onSuccess = onSuccess,
-                onFailure = onFailure
-            )
-        )
+    private val videoCaptureLauncher = this.activity.registerForActivityResult(
+        VideoCapture()
+    ) { uri ->
+
     }
 
-    fun launch(fragment: Fragment,
-               uri: Uri,
+    fun launch(uri: Uri,
                onSuccess: (VideoCaptureOutput) -> Unit,
                onFailure: (message: String) -> Unit) {
-        val videoCaptureLauncher = fragment.registerForActivityResult(
-            VideoCapture()
-        ) { uri ->
-
-        }
 
         videoCaptureLauncher.launch(
             VideoCaptureInput(

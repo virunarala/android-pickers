@@ -43,8 +43,8 @@ class OpenFile: ActivityResultContract<OpenFileInput, Uri?>() {
                     onSuccess(OpenFileOutput(uri))
                 }
             }
-            Activity.RESULT_CANCELED -> onFailure("Open File cancelled by user")
-            else -> onFailure("Failed to open file.")
+            Activity.RESULT_CANCELED -> onFailure("Cancelled")
+            else -> onFailure("Failed to open file")
         }
 
         return uri

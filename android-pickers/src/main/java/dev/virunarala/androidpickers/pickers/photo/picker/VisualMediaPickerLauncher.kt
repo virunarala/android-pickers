@@ -6,37 +6,23 @@ import androidx.fragment.app.Fragment
 import dev.virunarala.androidpickers.pickers.photo.picker.model.VisualMediaPickerInput
 import dev.virunarala.androidpickers.pickers.photo.picker.model.VisualMediaPickerOutput
 
-class VisualMediaPickerLauncher {
+class VisualMediaPickerLauncher private constructor(activity: ComponentActivity? = null,
+                                                    fragment: Fragment? = null
+) {
+    constructor(activity: ComponentActivity): this(activity,null)
+    constructor(fragment: Fragment): this(null,fragment)
 
-    fun launch(activity: ComponentActivity,
-               mediaType: ActivityResultContracts.PickVisualMedia.VisualMediaType,
-               onSuccess: (VisualMediaPickerOutput) -> Unit,
-               onFailure: (message: String) -> Unit) {
-        val visualMediaPickerLauncher = activity.registerForActivityResult(
-            VisualMediaPicker()
-        ) { uri ->
+    private val activity = activity ?: fragment!!.requireActivity()
 
-        }
+    private val visualMediaPickerLauncher = this.activity.registerForActivityResult(
+        VisualMediaPicker()
+    ) { uri ->
 
-        visualMediaPickerLauncher.launch(
-            VisualMediaPickerInput(
-                mediaType,
-                onSuccess = onSuccess,
-                onFailure = onFailure
-            )
-        )
     }
 
-    fun launch(fragment: Fragment,
-               mediaType: ActivityResultContracts.PickVisualMedia.VisualMediaType,
+    fun launch(mediaType: ActivityResultContracts.PickVisualMedia.VisualMediaType,
                onSuccess: (VisualMediaPickerOutput) -> Unit,
                onFailure: (message: String) -> Unit) {
-        val visualMediaPickerLauncher = fragment.registerForActivityResult(
-            VisualMediaPicker()
-        ) { uri ->
-
-        }
-
         visualMediaPickerLauncher.launch(
             VisualMediaPickerInput(
                 mediaType,
